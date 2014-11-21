@@ -1,0 +1,20 @@
+What happens when you initialize a repository? Why do you need to do it?
+- Git creates the metadata necessary to start tracking changes. It is needed in order for Git to run on this folder and to allow for future git actions.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+- It represents the middle step in between the working directory and the repository. It is where you operate, by adding files from the working directory which will later be committed to the repository.
+
+How can you use the staging area to make sure you have one commit per logical change?
+- It is possible to compare the changes between the staging area and the latest commit using git diff --staged. This way I can double check I am committing the changes related to a sole logical change. 
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+- Branches are useful when the logical change is either experimental or of different nature from the normal progression of the project. For example, a translation of the program is a different process than the normal development. Same thing for an experimental feature. Context switching. 
+
+How do the diagrams help you visualize the branch structure?
+- They help make it clear which commits are accessible through different branches.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+- Keep all code common to both versions, delete whatever was deleted in any of the branches (compared to the original place where they split) and add all that was added on either branch.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+- Pros is it saves a lot of work, time, … and reduces human error. The cons are that it gets stuck in conflicts, which is actually better than doing bad merges.
